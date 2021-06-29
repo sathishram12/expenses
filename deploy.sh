@@ -8,7 +8,7 @@ fi
 
 git add .
 git commit -m "$1"
-git push origin master
+git push origin main
 
 # expenses.chodounsky.net
 REACT_APP_SHEET_ID=1WDvmmWrJ5uxlFGiQISlpzMCBn4UOn3zBB0yEcTSOcr0 npm run build
