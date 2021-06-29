@@ -10,7 +10,7 @@ git add .
 git commit -m "$1"
 git push origin main
 
-# expenses.chodounsky.net
+# Todo in future this will deploy in cloud
 REACT_APP_SHEET_ID=1WDvmmWrJ5uxlFGiQISlpzMCBn4UOn3zBB0yEcTSOcr0 npm run build
 cp -a build/. production/
 cd production
