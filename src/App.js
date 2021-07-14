@@ -15,7 +15,7 @@ class App extends Component {
     super();
 
     this.clientId ="786926461864-0898buqt82o34sv9e3k9t2ahr80fv5qb.apps.googleusercontent.com"
-    this.spreadsheetId = process.env.REACT_APP_SHEET_ID;
+    this.spreadsheetId ="1tktF9QHDXOJ2io4BkDLJHk0BtRkdednNHU5eclUlGPY";
 
     this.state = {
       signedIn: undefined,
@@ -205,6 +205,7 @@ class App extends Component {
   }
 
   load() {
+    
     window.gapi.client.sheets.spreadsheets.values
       .batchGet({
         spreadsheetId: this.spreadsheetId,
@@ -215,6 +216,7 @@ class App extends Component {
         ]
       })
       .then(response => {
+        console.log("hi")
         const categories = response.result.valueRanges[0].values.map(
           items => items[0]
         );
