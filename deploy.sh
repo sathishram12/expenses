@@ -8,11 +8,10 @@ fi
 
 git add .
 git commit -m "$1"
-git push origin main
+git push origin master
 
-# Todo in future this will deploy in cloud
-REACT_APP_SHEET_ID=1WDvmmWrJ5uxlFGiQISlpzMCBn4UOn3zBB0yEcTSOcr0 npm run build
-echo "I am here"
+# expenses.chodounsky.net
+npm run build
 cp -a build/. production/
 cd production
 git add .
